@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Letter Style Picker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Letter Style Picker</h1>
+    <p class="subtitle">Type your letter or text, choose from 1000 styles, pick a color, then copy or forward.</p>
+
+    <label for="inputText">Input letter or text</label>
+    <input id="inputText" type="text" placeholder="Example: A or Hello" />
+
+    <label for="styleType">Choose style type</label>
+    <input id="styleSearch" type="text" placeholder="Search style name..." />
+    <select id="styleType">
+      <option value="">Loading styles...</option>
+    </select>
+
+    <label for="textColor">Choose color</label>
+    <input id="textColor" type="color" value="#b24c2a" />
+
+    <label>Quick colors</label>
+    <div id="colorPalette" class="color-palette" aria-label="Quick color choices"></div>
+
+    <div class="button-row">
+      <button id="applyBtn" type="button">Apply Style</button>
+      <button id="copyBtn" class="secondary" type="button">Copy</button>
+    </div>
+
+    <label for="appSelect">Forward text to application</label>
+    <div class="forward-row">
+      <select id="appSelect">
+        <option value="share">System Share</option>
+        <option value="whatsapp">WhatsApp</option>
+        <option value="telegram">Telegram</option>
+        <option value="email">Email</option>
+        <option value="sms">SMS</option>
+      </select>
+      <button id="forwardBtn" class="secondary" type="button">Forward</button>
+    </div>
+
+    <section class="output-wrap">
+      <h2>Preview</h2>
+      <div id="outputText" class="output" aria-live="polite">Your styled text will appear here.</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
